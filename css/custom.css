@@ -1,0 +1,94 @@
+tml .bg-color-primary, html .bg-primary {
+    background-color: #000 !important;
+}
+
+.home-intro {
+    margin-bottom: 0px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+/* Inicio Câmbio*/
+.testimonial {
+    margin-bottom: 0px;
+}
+
+.home-intro p span:not(.highlighted-word) {
+    color: #FFF;
+    display: block;
+    font-size: 0.7em;
+    font-weight: 400;
+    padding-top: 0px;
+    opacity: 0.7;
+}
+
+.feature-box .feature-box-icon {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 100%;
+    color: #FFF;
+    font-size: 16px;
+    font-size: 1rem;
+    position: relative;
+    top: 7px;
+    text-align: center;
+	padding-right: 10px;
+    height: 1px;
+    width: 2.7em;
+    height: 2.7em;
+}
+/* Fim Câmbio*/
+
+.call-to-action {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 32px 500px;
+	white-space: normal;
+    clear: both;
+    margin-top: 225px;
+}
+
+html .call-to-action.call-to-action-primary {
+    background: #000000;
+}	
+	
+.blockquote-primary {
+    border-color: #0088CC !important;
+    background: #000000;
+	opacity: 0.8;
+}	
+
+.texto-noticia {
+    color: #ffffff;
+    line-height: 40px;
+    margin: 0 0 20px;
+	font-size: 30px;
+}	
+
+.texto-fonte-noticia {
+    color: silver;
+    line-height: 26px;
+    margin: 0 15px 0px;
+	font: 12px "Courier New", Courier, mono;
+	text-align: right;
+}	
+
+.relogio {
+
+    line-height: 1.9;
+}
+
+.tela-filme {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+  }
+
