@@ -210,23 +210,25 @@
 		theme.fn.intObsInit( '[data-plugin-readmore]:not(.manual)', 'themePluginReadMore' );
 	}
 
-	// Revolution Slider
-	if ($.isFunction($.fn['themePluginRevolutionSlider']) && ( $('[data-plugin-revolution-slider]').length || $('.slider-container .slider').length )) {
 
-		$(function() {
-			$('[data-plugin-revolution-slider]:not(.manual), .slider-container .slider:not(.manual)').each(function() {
-				var $this = $(this),
-					opts;
+	// // Revolution Slider
+	// if ($.isFunction($.fn['themePluginRevolutionSlider']) && ( $('[data-plugin-revolution-slider]').length || $('.slider-container .slider').length )) {
 
-				var pluginOptions = theme.fn.getOptions($this.data('plugin-options'));
-				if (pluginOptions)
-					opts = pluginOptions;
+	// 	$(function() {
+	// 		$('[data-plugin-revolution-slider]:not(.manual), .slider-container .slider:not(.manual)').each(function() {
+	// 			var $this = $(this),
+	// 				opts;
 
-				$this.themePluginRevolutionSlider(opts);
-			});
-		});
+	// 			var pluginOptions = theme.fn.getOptions($this.data('plugin-options'));
+	// 			if (pluginOptions)
+	// 				opts = pluginOptions;
 
-	}
+	// 			$this.themePluginRevolutionSlider(opts);
+	// 		});
+	// 	});
+
+	// }
+
 
 	// Scroll Spy
 	if ($.isFunction($.fn['themePluginScrollSpy']) && $('[data-plugin-scroll-spy]').length) {
