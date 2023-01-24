@@ -1,7 +1,7 @@
 const endpoints = [
-    "https://br.investing.com/rss/news_25.rss",
-    "https://www.gazetadopovo.com.br/feed/rss/bomgourmet.xml",
-    "https://esportes.r7.com/futebol/feed.xml"
+  {url : "https://esportes.r7.com/futebol/feed.xml", fonte:"Fonte: R7.com"},
+  {url : "https://br.investing.com/rss/news_25.rss", fonte:"Fonte: Investing.com"},
+  {url : "https://www.gazetadopovo.com.br/feed/rss/bomgourmet.xml", fonte:"Fonte: gazetadopovo.com.br"}
 ];
 
 //Numero de notícias de cada endpoint ex: 5 terá 15 notícias, 5 de cada
@@ -28,7 +28,7 @@ function coletaNoticias()
   (
     //metodo MAP faz com que possamos rodar uma função para cada item do array
     //nesse caso estamos rodando o fetch para cada valor no array endpoints
-    endpoints.map(endpoint => fetch(endpoint)
+    endpoints.map(endpoint => fetch(endpoint.url)
       .then(response => {
         return response.text();
       })
@@ -123,6 +123,14 @@ function montaNoticiasSlider()
         {
           campo['imagem'] = feed.getElementsByTagName('mediaurl')[0].innerHTML;
         }
+
+        //Se imagem for vazia, pula notícia e não inclui no slider
+        if(!campo['imagem'])
+        {
+          continue;
+        }
+
+        console.log("IMAGEM", campo['imagem']);
 
         //Altera atributo src da imagem do slide
         $img.setAttribute('src', campo['imagem']);
