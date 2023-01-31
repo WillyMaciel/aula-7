@@ -51,10 +51,19 @@
 										data-lineheight="['26','26','26','45']"
 										style="color: #ffffff;">
 
-									<blockquote class="blockquote-primary">
-										<p class="texto-noticia">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-										<p class="texto-fonte-noticia"> Fonte: <b>xxx.com.br</b></p>
-									</blockquote>
+									<div class="container">
+										<blockquote class="blockquote-primary">
+	                                    <div class="row">
+	                                       <div class="col-lg-2">
+	                                          <div class="qrcode-noticia"></div>
+	                                       </div>
+	                                       <div class="col-lg-10">
+	                                          <p class="texto-noticia">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+	                                          <p class="texto-fonte-noticia"> Fonte: <b>xx</b></p>
+	                                          <p class="link-qrcode"> LINK QRCODE: <b>xx</b></p>
+	                                       </div>
+	                                 	</blockquote>
+                                 	</div>
 								</div>
 							</li>
 
@@ -75,6 +84,7 @@
 		<script src="js/views/view.home.js"></script>
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
+		<script src="js/qrcode.min.js"></script>
 		<!-- Theme Initialization Files -->
 		<script src="coletorNoticias.js"></script>
 		<script src="js/theme.init.js"></script>

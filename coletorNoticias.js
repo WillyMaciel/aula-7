@@ -67,7 +67,7 @@ function montaNoticiasSlider()
         feed = xml.getElementsByTagName('entry');
       }
 
-      console.log(feed);
+      console.log("FEED", feed);
 
       //Adiciona feed de noticias no array noticias
       noticias.push(feed);
@@ -100,6 +100,39 @@ function montaNoticiasSlider()
 
         //capturo o elemento que segura o texto da noticia pela classe texto-noticia
         $texto_noticia = $novo_slide.getElementsByClassName('texto-noticia')[0];
+
+        /***** QRCODE INICIO *****/
+
+        //capturo o elemento que segura o QRCODE da noticia pela classe qrcode-noticia
+        $qrcode_noticia = $novo_slide.getElementsByClassName('qrcode-noticia')[0];
+
+        //captura URL da noticia no XML
+        //Observando os XMLS atuais existem 2 estruturas diferentes para URL de notícia, tag url e tag link
+        //Primeiro tenta capturar a URL pela tag URL
+        let url = feed.getElementsByTagName('url');
+
+        //Se não existe tag URL tenta buscar por tag LINK
+        if(url.length <= 0)
+        {
+          url = feed.getElementsByTagName('link');
+        }
+
+        //Extrai o texto da URL capturada acima
+        url = url[0].textContent;
+
+        console.log("URL PARA QRCODE: " + url);
+
+        //Gera o QRCODE dentro do nosso elemento qrcode-noticia desta noticia
+        var qrcode = new QRCode($qrcode_noticia, {
+          text: url,
+          width: 128,
+          height: 128,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+        });
+
+        /***** QRCODE FIM *****/
 
         campo['titulo'] = feed.getElementsByTagName('title')[0].textContent
 
